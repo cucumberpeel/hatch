@@ -45,11 +45,11 @@ An Example Recipe:
 
 /recipes/query - page for showing recipes filtered by query
 
-![list create](documentation/list-create.png)
+![list create](documentation/hatch-filter.png)
 
 /recipes - page for showing all recipes
 
-![list](documentation/list.png)
+![list](documentation/hatch-all-recipes.png)
 
 /recipes/slug - page for showing specific recipe
 
