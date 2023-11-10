@@ -1,3 +1,4 @@
+import './config.mjs';
 import './db.mjs';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -18,7 +19,7 @@ const Recipe = mongoose.model('Recipe');
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-    res.send("hi, im a skeleton");
+    res.render('home');
 })
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT ?? 3000);
