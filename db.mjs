@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
 
-// console.log(process.env.DSN);
-// mongoose.connect(process.env.DSN);
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+console.log(process.env.DSN);
+mongoose.connect(process.env.DSN);
 
 // ingredient schema
 const Ingredient = new mongoose.Schema({
