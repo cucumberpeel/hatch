@@ -8,6 +8,9 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// temporarily using hbs
+app.set('view engine', 'hbs');
+
 const Ingredient = mongoose.model('Ingredient');
 const Recipe = mongoose.model('Recipe');
 
