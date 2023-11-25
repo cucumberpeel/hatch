@@ -3,6 +3,8 @@ import './db.mjs';
 import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
+import {resolve, dirname} from 'path';
+import {readFile, readdir} from 'fs';
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -18,8 +20,52 @@ const Recipe = mongoose.model('Recipe');
 // body parser (req.body)
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
+let recipeList = []
+
+const readingPath = path.resolve(__dirname, './saved-recipes');
+
+function readFromFS(path, onReadingDone) {
+
+    readdir(path, (err, files) => {
+        let count = 0;
+        //Get the # of files in the current directory
+        const nFiles = files.length;
+  
+        //Iterate through every filename and read them
+        for (const fileName of files) {
+            const filePath = resolve(path, fileName);
+  
+            readFile(filePath, (err, data) => {
+                ++count;
+  
+                //Throw error if input file cannot be opened
+                if (err) {
+                    throw err;
+                }
+  
+                //Parse file content to JSON objects
+                const fileInJson = JSON.parse(data.toString());
+  
+                // Cast JSON objects to Task Objects
+                const recipe = Object.assign(fileInJson, Recipe.prototype);
+                recipeList.push(recipe);
+  
+                //If we are done with this LAST file, call the callback to signal a finish of reading all configs!
+                if (count === nFiles) {
+                    onReadingDone(recipeList);
+                }
+            })
+        }
+    });
+}
+
+readFromFS(readingPath, (recipeList) => {
+    app.get('/', (req, res) => {
+        res.render('home', {
+            title: "Recipes",
+            "recipe": recipeList
+        });
+    });
+});
 
 app.listen(process.env.PORT ?? 3000);

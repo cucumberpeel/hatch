@@ -1,7 +1,16 @@
 <div id="filter-container">
-    <h1>Filter By</h1>
+    <h1>Filter Recipes</h1>
     <form method="GET" action="/">
         <input type="text" name="searchQ" placeholder="Search ingredients..." />
         <input type="submit" value="Search" />
     </form>
+    <h1>{{title}}</h1>
+    <div class="recipes-display-container">
+        {{#each recipe}}
+        <article class="recipe-article">
+            <h1>{{title}}</h1>
+            <p>placeholder for recipe description</p>
+        </article>
+        {{/each}}
+    </div>
 </div>
