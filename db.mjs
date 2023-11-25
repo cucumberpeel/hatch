@@ -12,9 +12,10 @@ const Ingredient = new mongoose.Schema({
 // recipe schema
 const Recipe = new mongoose.Schema({
     name: { type: String, required: true },
+    altName: { type: String, required: true },
     prepTime: { type: Number, required: true },
     description: { type: String, required: true },
-    ingredients: [{ type: String, required: true}]
+    ingredients: [{ type: String }]
     // ingredients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }]
 })
 

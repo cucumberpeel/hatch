@@ -20,9 +20,9 @@ An Example Ingredient:
 
 ```javascript
 {
-  name: "all-purpose flour",
-  quantity: 1.5,
-  unit: "cup"
+  name: "soy sauce",
+  altName: [{ "간장", "酱油" }]
+  category: "condiment"
 }
 ```
 
@@ -30,11 +30,15 @@ An Example Recipe:
 
 ```javascript
 {
-  name: "pancakes",
-  prepTime: 20,
+  name: "Tteokbokki",
+  altName: "떡볶이",
+  prepTime: 15,
+  description : "Chewy rice cakes cooked in a red, spicy broth.",
   ingredients: [
-    { name: "all-purpose flour", quantity: 1.5, unit: "cup" },
-    { name: "egg", quantity: 2, unit: "egg" }
+    { name: "gochujang", quantity: 1.5, unit: "tablespoon" },
+    { name: "gochugaru", quantity: 1.5, unit: "tablespoon" },
+    { name: "soy sauce", quantity: 0.5, unit: "tablespoon" },
+    { name: "rice cake", quantity: 0.5, unit: "pound" }
     ] // array of references to Ingredient documents
 }
 ```

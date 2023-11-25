@@ -46,9 +46,16 @@ function readFromFS(path, onReadingDone) {
                 //Parse file content to JSON objects
                 const fileInJson = JSON.parse(data.toString());
   
-                // Cast JSON objects to Task Objects
-                const recipe = Object.assign(fileInJson, Recipe.prototype);
-                recipeList.push(recipe);
+                // Cast JSON objects to Recipe Objects
+                const newRecipe = new Recipe();
+                newRecipe.name = fileInJson.name;
+                newRecipe.altName = fileInJson.altName;
+                newRecipe.prepTime = fileInJson.prepTime;
+                newRecipe.description = fileInJson.description;
+                newRecipe.ingredients = fileInJson.ingredients;
+                recipeList.push(newRecipe);
+                // const recipe = Object.assign(fileInJson, Recipe.prototype);
+                // recipeList.push(recipe);
   
                 //If we are done with this LAST file, call the callback to signal a finish of reading all configs!
                 if (count === nFiles) {

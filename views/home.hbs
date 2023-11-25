@@ -8,8 +8,10 @@
     <div class="recipes-display-container">
         {{#each recipe}}
         <article class="recipe-article">
-            <h1>{{title}}</h1>
-            <p>placeholder for recipe description</p>
+            <h1>{{name}}</h1>
+            <h3>{{altName}}</h3>
+            <p>Prep Time: {{prepTime}} minutes</p>
+            <p>{{description}}</p>
         </article>
         {{/each}}
     </div>

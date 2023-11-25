@@ -1,0 +1,7 @@
+{
+    "name" : "Japchae",
+    "altName" : "잡채",
+    "prepTime" : 40,
+    "description" : "Dangmyeon (sweet potato noodles) stir-fried with vegetables.",
+    "ingredients" : ["dangmyeon", "pork belly", "soy sauce", "sugar", "bell pepper", "mushroom", "sesame oil", "garlic", "onion"]
+}
