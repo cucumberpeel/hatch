@@ -4,9 +4,9 @@ Amory Gao
 
 ## Overview
 
-Tired of making the same few recipes over and over? Can't think of ways to switch up your diet? Introducing Hatch, your personal cooking companion!
+Asian Americans, are you tired of making the same few recipes over and over? Can't think of ways to switch up your diet? Introducing Hatch, your personal cooking companion!
 
-Hatch is a web app that will allow users to find recipes based on ingredients they select. Users can browse vetted recipes based on tags or filter based on the ingredients they'd like to use.
+Hatch is a web app that will allow users to find Chinese and Korean recipes based on ingredients they select. Users can browse vetted recipes based on tags or filter based on the ingredients they'd like to use.
 
 ## Data Model
 
