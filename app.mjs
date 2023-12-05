@@ -33,11 +33,26 @@ let recipeList = [];
 const recipeReadingPath = path.resolve(__dirname, './saved-recipes');
 readRecipesFromFS(recipeReadingPath, (recipeList) => {
     app.get('/', (req, res) => {
-        let newList = filterRecipes(req, recipeList);
-        res.render('home', {
-            title: "Recipes",
-            "recipe": newList
-        });
+        if (req.query['searchQ']) {
+            let newList = filterRecipesByIngredient(req, recipeList);
+            res.render('home', {
+                title: "Recipes that include " + req.query['searchQ'],
+                "recipe": newList
+            });
+        }
+        else if (req.query['recipeQ']) {
+            let newList = filterRecipesByKeyword(req, recipeList);
+            res.render('home', {
+                title: req.query['recipeQ'] + " Recipes",
+                "recipe": newList
+            })
+        }
+        else {
+            res.render('home', {
+                title: "Recipes",
+                "recipe": recipeList
+            });
+        }
     });
 });
 
@@ -189,7 +204,7 @@ const renderIngredient = function(name, ingredientList, req, res) {
 }
 
 // filter recipes by ingredients on the home page
-function filterRecipes(req, recipeList) {
+function filterRecipesByIngredient(req, recipeList) {
     if (req.query['searchQ']) {
         const newList = [];
         for (let i = 0; i < recipeList.length; i++) {
@@ -197,6 +212,23 @@ function filterRecipes(req, recipeList) {
             const ingredients = recipeList[i]['ingredients'].map((i) => i['name']);
             // console.log(ingredients);
             if (ingredients.includes(req.query['searchQ'])) {
+                newList.push(recipeList[i]);
+            }
+        }
+        return newList;
+    }
+    else {
+        return recipeList;
+    }
+}
+
+function filterRecipesByKeyword(req, recipeList) {
+    if (req.query['recipeQ']) {
+        const newList = [];
+        for (let i = 0; i < recipeList.length; i++) {
+            const recipeNames = recipeList.map((r) => r.name);
+            // console.log(recipeNames);
+            if (recipeNames.includes(req.query['recipeQ'])) {
                 newList.push(recipeList[i]);
             }
         }
