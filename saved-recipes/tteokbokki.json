@@ -5,8 +5,10 @@
     "description" : "Chewy rice cakes cooked in a red, spicy broth.",
     "intro" : "blah",
     "ingredients" : [
-        {"name" : "gochujang", "amt" : 3, "unit" : "tablespoons"},
-        {"name" : "gochugaru", "amt" : 3, "unit" : "tablespoons"}
+        { "name": "gochujang", "amt": 1.5, "unit": "tablespoons" },
+    { "name": "gochugaru", "amt": 1.5, "unit": "tablespoons" },
+    { "name": "soy-sauce", "amt": 0.5, "unit": "tablespoons" },
+    { "name": "rice-cake", "amt": 0.5, "unit": "pounds" }
     ],
     "steps" : [
         "Add the water, dried anchovies, and dried kelp to a shallow pot or pan.",

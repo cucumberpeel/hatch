@@ -1,10 +1,12 @@
 <div id="filter-container">
     <h2>Search Recipes</h2>
+    {{!-- form 2: filter recipes by name --}}
     <form method="GET" action="/">
         <input type="text" name="recipeQ" placeholder="Enter recipe name..." />
         <input type="submit" value="Search" />
     </form>
     {{!-- put filter functionality in sidebar later --}}
+    {{!-- form 1: filter recipes by ingredients used in it --}}
     <h2>Filter Recipes by Ingredients</h2>
     <form method="GET" action="/">
         <input type="text" name="searchQ" placeholder="Search ingredients..." />
