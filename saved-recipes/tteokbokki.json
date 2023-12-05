@@ -4,5 +4,12 @@
     "prepTime" : 15,
     "description" : "Chewy rice cakes cooked in a red, spicy broth.",
     "intro" : "blah",
-    "ingredients" : ["gochujang", "gochugaru", "soy-sauce", "rice-cake"]
+    "ingredients" : [
+        {"name" : "gochujang", "amt" : 3, "unit" : "tablespoons"},
+        {"name" : "gochugaru", "amt" : 3, "unit" : "tablespoons"}
+    ],
+    "steps" : [
+        "Add the water, dried anchovies, and dried kelp to a shallow pot or pan.",
+        "Boil for 15 minutes over medium high heat without the lid."
+    ]
 }

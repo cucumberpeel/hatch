@@ -4,5 +4,12 @@
     "prepTime" : 40,
     "description" : "Dangmyeon (sweet potato noodles) stir-fried with vegetables.",
     "intro" : "blah",
-    "ingredients" : ["dangmyeon", "pork-belly", "soy-sauce", "sugar", "bell-pepper", "mushroom", "sesame-oil", "garlic", "onion"]
+    "ingredients" : [
+        {"name" : "dangmyeon", "amt" : 1, "unit" : "bundles"},
+        {"name" : "pork-belly", "amt" : 0.5, "unit" : "pounds"}
+    ],
+    "steps" : [
+        "Crack the egg and separate the egg yolk from the egg white. Remove the white stringy stuff (chalaza) from the yolk. Beat in a pinch of salt with a fork.",
+        "Add 1 teaspoon of vegetable oil to a heated nonstick pan. Swirl the oil around so it covers the pan, and then wipe off the excess heated oil with a kitchen towel so only a thin layer remains on the pan."
+    ]
 }

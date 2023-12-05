@@ -6,10 +6,23 @@
         <p>Prep Time: {{prepTime}} minutes</p>
         <p>{{description}}</p>
         <p>{{intro}}</p>
+    </section>
+
+    <section id="recipe-ingredients">
+        <h2>Ingredients</h2>
         <ul>
             {{#each ingredients}}
-            <li><a href="/ingredient/{{this}}">{{this}}</a></li>
+            <li><a href="/ingredient/{{this.name}}">{{this.name}}</a>, {{this.amt}} {{this.unit}}</li>
             {{/each}}
         </ul>
+    </section>
+
+    <section id="recipe-steps">
+        <h2>Let's Get Started</h2>
+        <ol>
+            {{#each steps}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ol>
     </section>
 </div>

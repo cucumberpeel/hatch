@@ -25,7 +25,7 @@ let ingredientList = [];
 const ingredientReadingPath = path.resolve(__dirname, './saved-ingredients');
 readIngredientsFromFS(ingredientReadingPath, (ingredientList) => {
     // just save the ingredient list but dont do anything yet
-    console.log(ingredientList);
+    // console.log(ingredientList);
 });
 
 // read in global list of recipes
@@ -33,9 +33,10 @@ let recipeList = [];
 const recipeReadingPath = path.resolve(__dirname, './saved-recipes');
 readRecipesFromFS(recipeReadingPath, (recipeList) => {
     app.get('/', (req, res) => {
+        let newList = filterRecipes(req, recipeList);
         res.render('home', {
             title: "Recipes",
-            "recipe": recipeList
+            "recipe": newList
         });
     });
 });
@@ -127,7 +128,8 @@ function readRecipesFromFS(path, onReadingDone) {
                 newRecipe.prepTime = fileInJson.prepTime;
                 newRecipe.description = fileInJson.description;
                 newRecipe.intro = fileInJson.intro;
-                newRecipe.ingredients = fileInJson.ingredients;
+                newRecipe.ingredients = fileInJson.ingredients; // list of objects
+                newRecipe.steps = fileInJson.steps; // list of strings
                 recipeList.push(newRecipe);
                 // const recipe = Object.assign(fileInJson, Recipe.prototype);
                 // recipeList.push(recipe);
@@ -156,7 +158,8 @@ const renderRecipe = function(name, recipeList, req, res) {
             prepTime: result.prepTime,
             description: result.description,
             intro: result.intro,
-            ingredients: result.ingredients
+            ingredients: result.ingredients, // still a list of objects
+            steps: result.steps // still a list of strings
         });
     }
     else {
@@ -182,5 +185,24 @@ const renderIngredient = function(name, ingredientList, req, res) {
     }
     else {
         return res.render('error');
+    }
+}
+
+// filter recipes by ingredients on the home page
+function filterRecipes(req, recipeList) {
+    if (req.query['searchQ']) {
+        const newList = [];
+        for (let i = 0; i < recipeList.length; i++) {
+            // recipeList[i]['ingredients'] should be array of objects
+            const ingredients = recipeList[i]['ingredients'].map((i) => i['name']);
+            // console.log(ingredients);
+            if (ingredients.includes(req.query['searchQ'])) {
+                newList.push(recipeList[i]);
+            }
+        }
+        return newList;
+    }
+    else {
+        return recipeList;
     }
 }

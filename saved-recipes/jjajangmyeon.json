@@ -4,5 +4,12 @@
     "prepTime" : 50,
     "description" : "Noodles in a thick black bean sauce.",
     "intro" : "blah",
-    "ingredients" : ["chunjang", "pork-belly", "daikon", "onion", "potato", "zucchini", "sesame-oil"]
+    "ingredients" : [
+        {"name" : "chunjang", "amt" : 1, "unit" : "cups"},
+        {"name" : "pork-belly", "amt" : 0.5, "unit" : "pounds"}
+    ],
+    "steps" : [
+        "Stir-fry the pork belly in a large, deep wok (or pan) with 1 tablespoon of vegetable oil for about 4-5 minutes, until golden brown and crispy.",
+        "Pour out the excess pork fat, leaving 1-2 teaspoons in the pan."
+    ]
 }
