@@ -8,7 +8,7 @@ const Ingredient = new mongoose.Schema({
     name: { type: String, required: true },
     category: { type: String, required: true },
     description: { type: String, required: true }
-})
+});
 
 // recipe schema
 const Recipe = new mongoose.Schema({
@@ -24,7 +24,7 @@ const Recipe = new mongoose.Schema({
         }],
     steps: [{ type: String }]
     // ingredients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }] the schemas are linked but not in this way
-})
+});
 
 // use of 2 mongoose schemas
 mongoose.model('Ingredient', Ingredient);
