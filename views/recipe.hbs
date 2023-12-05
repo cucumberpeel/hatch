@@ -1,0 +1,15 @@
+<div id="recipe-page">
+    <a href="/">Return to Home</a>
+    <section id="recipe-profile">
+        <h1>{{name}}</h1>
+        <h3>{{altName}}</h3>
+        <p>Prep Time: {{prepTime}} minutes</p>
+        <p>{{description}}</p>
+        <p>{{intro}}</p>
+        <ul>
+            {{#each ingredients}}
+            <li><a href="/ingredient/{{this}}">{{this}}</a></li>
+            {{/each}}
+        </ul>
+    </section>
+</div>

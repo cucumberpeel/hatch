@@ -6,7 +6,8 @@ mongoose.connect(process.env.DSN);
 // ingredient schema
 const Ingredient = new mongoose.Schema({
     name: { type: String, required: true },
-    category: { type: String, required: true }
+    category: { type: String, required: true },
+    description: { type: String, required: true }
 })
 
 // recipe schema
@@ -15,6 +16,7 @@ const Recipe = new mongoose.Schema({
     altName: { type: String, required: true },
     prepTime: { type: Number, required: true },
     description: { type: String, required: true },
+    intro: { type: String, required: true },
     ingredients: [{ type: String }]
     // ingredients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }]
 })

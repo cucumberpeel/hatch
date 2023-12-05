@@ -1,7 +1,8 @@
 {
-    "name" : "Tteokbokki",
+    "name" : "tteokbokki",
     "altName" : "떡볶이",
     "prepTime" : 15,
     "description" : "Chewy rice cakes cooked in a red, spicy broth.",
-    "ingredients" : ["gochujang", "gochugaru", "soy sauce", "rice cake"]
+    "intro" : "blah",
+    "ingredients" : ["gochujang", "gochugaru", "soy-sauce", "rice-cake"]
 }

@@ -1,7 +1,8 @@
 {
-    "name" : "Jjajangmyeon",
+    "name" : "jjajangmyeon",
     "altName" : "짜장면",
     "prepTime" : 50,
     "description" : "Noodles in a thick black bean sauce.",
-    "ingredients" : ["chunjang", "pork belly", "daikon", "onion", "potato", "zucchini", "sesame oil"]
+    "intro" : "blah",
+    "ingredients" : ["chunjang", "pork-belly", "daikon", "onion", "potato", "zucchini", "sesame-oil"]
 }
