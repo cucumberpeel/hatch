@@ -222,20 +222,20 @@ readRecipesFromFS(recipeReadingPath, (recipeList) => {
     app.get('/', (req, res) => {
         if (req.query['searchQ']) {
             const newList = filterRecipesByIngredient(req, recipeList);
-            res.render('home', {
+            res.render('index', {
                 title: "Recipes that include " + req.query['searchQ'],
                 "recipe": newList
             });
         }
         else if (req.query['recipeQ']) {
             const newList = filterRecipesByKeyword(req, recipeList);
-            res.render('home', {
+            res.render('index', {
                 title: req.query['recipeQ'] + " Recipes",
                 "recipe": newList
             });
         }
         else {
-            res.render('home', {
+            res.render('index', {
                 title: "Recipes",
                 "recipe": recipeList
             });

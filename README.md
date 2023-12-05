@@ -89,9 +89,10 @@ An Example Recipe:
 
 ## Research Topics
 
-* (2 points) Integration of ESLint into workflow
 * (3 points) Configuration management
-* (3 points) client-side Javascript library
+* (2 points) Bootstrap theme
+    * Shop Homepage
+* (4 points) client-side Javascript library
     * Animate on Scroll: detects element positions as they appear in the viewport to add classes to animate the site as a user scrolls
 
 10 points total out of 10 required points
@@ -102,5 +103,5 @@ An Example Recipe:
 ## Annotations / References Used
 
 1. [aos.js](https://github.com/michalsnik/aos)
-2. [Next.js tutorial](https://nextjs.org/learn?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=home)
+2. [Bootstrap theme](https://startbootstrap.com/template/shop-homepage)
 

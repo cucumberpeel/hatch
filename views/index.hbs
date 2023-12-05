@@ -1,0 +1,55 @@
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Hatch</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Your personal home cooking companion</p>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5" style="padding: 1em">
+    {{!-- <h2>Search Recipes</h2> --}}
+    {{!-- form 2: filter recipes by name --}}
+    <form method="GET" action="/">
+        <input type="text" name="recipeQ" placeholder="Search recipe name..." />
+        <input type="submit" value="Search" />
+    </form>
+</div>
+<div class="container px-4 px-lg-5">
+    {{!-- put filter functionality in sidebar later --}}
+    {{!-- form 1: filter recipes by ingredients used in it --}}
+    {{!-- <h2>Filter Recipes by Ingredients</h2> --}}
+    <form method="GET" action="/">
+        <input type="text" name="searchQ" placeholder="Search ingredients..." />
+        <input type="submit" value="Search" />
+    </form>
+</div>
+<h1 class="text-center" class="display-4 fw-bolder">{{title}}</h1>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {{#each recipe}}
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{name}}</h5>
+                            <!-- Product native name-->
+                            <p>{{altName}}</p>
+                            <p>Prep time: {{prepTime}} minutes</p>
+                            <p>{{description}}</p>
+                        </div>
+                    </div>
+                    <!-- Actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/recipe/{{name}}">See recipe</a></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

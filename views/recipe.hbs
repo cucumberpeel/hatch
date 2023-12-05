@@ -1,13 +1,17 @@
-<div id="recipe-page">
-    <a href="/">Return to Home</a>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">{{name}}</h1>
+            <p class="lead fw-normal text-white-50 mb-0">{{description}}</p>
+        </div>
+    </div>
+</header>
+
+<section class="py-5">
     <section id="recipe-profile">
-        <h1>{{name}}</h1>
-        <h3>{{altName}}</h3>
         <p>Prep Time: {{prepTime}} minutes</p>
-        <p>{{description}}</p>
         <p>{{intro}}</p>
     </section>
-
     <section id="recipe-ingredients">
         <h2>Ingredients</h2>
         {{!-- form 3: scale recipes from 1x to 5x --}}
@@ -23,7 +27,9 @@
             {{/each}}
         </ul>
     </section>
+</section>
 
+<section class="py-5">
     <section id="recipe-steps">
         <h2>Let's Get Started</h2>
         <ol>
@@ -32,4 +38,4 @@
             {{/each}}
         </ol>
     </section>
-</div>
+</section>
