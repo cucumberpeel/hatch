@@ -1,9 +1,12 @@
-<div id="ingredient-page">
-    <a href="javascript:history.back()">Go Back</a>
-    <section id="ingredient-profile">
-        <h1>{{name}}</h1>
-        <h3>Category: {{category}}</h3>
-        <p>{{description}}</p>
-        <p>Recipes that use {{name}} if i have time</p>
-    </section>
-</div>
+<header class="bg-dark py-5">
+    <a class="px-5 text-white" href="javascript:history.back()">Go Back</a>
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">{{name}}</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Category: {{category}}</p>
+        </div>
+    </div>
+</header>
+<body>
+    <p class="text-center">{{description}}</p>
+</body>
