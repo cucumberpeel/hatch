@@ -10,6 +10,11 @@
 
     <section id="recipe-ingredients">
         <h2>Ingredients</h2>
+        <form method="GET" action="">
+            <label for="factor">Scale:</label>
+            <input type="number" name="factor" id="factor" min="1" max="5" />
+            <input type="submit" value="View" />
+        </form>
         <ul>
             {{#each ingredients}}
             <li><a href="/ingredient/{{this.name}}">{{this.name}}</a>, {{this.amt}} {{this.unit}}</li>

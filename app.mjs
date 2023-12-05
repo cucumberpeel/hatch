@@ -167,13 +167,27 @@ const renderRecipe = function(name, recipeList, req, res) {
         }
     }
     if (result) {
+        // let factoredIngredients = [];
+        // document.getElementById("factor").addEventListener("click", (evt) => {
+        //     factoredIngredients = result.ingredients.map((i) => i.amt *= evt.target.value);
+        // });
+        // form 3 - scale ingredients
+        let factoredIngredients = [];
+        if (req.query['factor']) {
+            for (const i of result.ingredients) {
+                factoredIngredients.push({name: i.name, amt: i.amt * req.query['factor'], unit: i.unit});
+            }
+        }
+        else {
+            factoredIngredients = result.ingredients;
+        }
         return res.render('recipe', {
             name: result.name,
             altName: result.altName,
             prepTime: result.prepTime,
             description: result.description,
             intro: result.intro,
-            ingredients: result.ingredients, // still a list of objects
+            ingredients: factoredIngredients, // still a list of objects
             steps: result.steps // still a list of strings
         });
     }
