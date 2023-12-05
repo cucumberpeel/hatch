@@ -153,10 +153,9 @@ function filterRecipesByIngredient(req, recipeList) {
 function filterRecipesByKeyword(req, recipeList) {
     if (req.query['recipeQ']) {
         const newList = [];
-        for (let i = 0; i < recipeList.length; i++) {
-            const recipeNames = recipeList.map((r) => r.name);
-            // console.log(recipeNames);
-            if (recipeNames.includes(req.query['recipeQ'])) {
+        const recipeNames = recipeList.map((r) => r.name);
+        for (let i = 0; i < recipeNames.length; i++) {
+            if (recipeNames[i].includes(req.query['recipeQ'])) {
                 newList.push(recipeList[i]);
             }
         }
