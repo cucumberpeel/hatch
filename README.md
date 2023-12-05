@@ -12,9 +12,9 @@ Hatch is a web app that will allow users to find Chinese and Korean recipes base
 
 The application will store Ingredients and Recipes
 
-* Each recipe has a list of references to multiple Ingredients
+* Each recipe has a list of references to ingredients
 * Ingredients can be repeated across recipes
-* Will add more functionalities (e.g. tags, doubling/tripling recipes, etc.) if time permits
+* Recipes can be doubled, tripled, and so on up to a factor of 5x
 
 An Example Ingredient:
 
@@ -91,7 +91,7 @@ An Example Recipe:
 
 * (2 points) Integration of ESLint into workflow
 * (3 points) Configuration management
-* (2 points) client-side Javascript library
+* (3 points) client-side Javascript library
     * Animate on Scroll: detects element positions as they appear in the viewport to add classes to animate the site as a user scrolls
 
 10 points total out of 10 required points
