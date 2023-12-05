@@ -6,7 +6,7 @@
         </div>
     </div>
 </header>
-<div class="container px-4 px-lg-5" style="padding: 1em">
+<div class="container px-4 py-4">
     {{!-- <h2>Search Recipes</h2> --}}
     {{!-- form 2: filter recipes by name --}}
     <form method="GET" action="/">
@@ -14,7 +14,7 @@
         <input type="submit" value="Search" />
     </form>
 </div>
-<div class="container px-4 px-lg-5">
+<div class="container px-4">
     {{!-- put filter functionality in sidebar later --}}
     {{!-- form 1: filter recipes by ingredients used in it --}}
     {{!-- <h2>Filter Recipes by Ingredients</h2> --}}
@@ -23,15 +23,15 @@
         <input type="submit" value="Search" />
     </form>
 </div>
-<h1 class="text-center" class="display-4 fw-bolder">{{title}}</h1>
-<section class="py-5">
+<h1 class="text-center" class="display-5 fw-bolder">{{title}}</h1>
+<section class="py-3 px-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             {{#each recipe}}
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <img class="card-img-top" src="" alt="{{name}}" />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">

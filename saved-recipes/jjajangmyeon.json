@@ -3,13 +3,30 @@
     "altName" : "짜장면",
     "prepTime" : 50,
     "description" : "Noodles in a thick black bean sauce.",
-    "intro" : "blah",
+    "intro" : "Jjajangmyeon falls into a small but distinct category of Korean-Chinese food. Created by early Chinese immigrants in Korea, catering to Korean tastes, the almost caramel taste of the savory black bean sauce over the thick, chewy wheat flour noodles makes for a really unique taste and texture. Koreans even have a nonofficial celebration for this dish on April 14th of every year, when single people celebrate their shared loneliness on Black Day with a bowl of jjajangmyeon.",
     "ingredients" : [
-        {"name" : "chunjang", "amt" : 1, "unit" : "cups"},
-        {"name" : "pork-belly", "amt" : 0.5, "unit" : "pounds"}
+        {"name" : "chunjang", "amt" : 0.25, "unit" : "cups"},
+        {"name" : "pork-belly", "amt" : 0.5, "unit" : "pounds"},
+        {"name" : "noodles", "amt" : 1, "unit": "bundles"},
+        {"name": "daikon", "amt": 1, "unit": "cups"},
+        {"name": "potato", "amt": 1, "unit": "cups"},
+        {"name": "onion", "amt": 1.5, "unit": "cups"},
+        {"name": "zucchini", "amt": 1, "unit": "cups"},
+        {"name": "potato-starch", "amt": 2, "unit": "tablespoons"},
+        {"name": "sesame-oil", "amt": 2, "unit": "tablespoons"},
+        {"name": "sugar", "amt": 1, "unit": "teaspoons"}
     ],
     "steps" : [
+        "Cut pork belly, daikon radish, potato, onion, and zucchini into cubes.",
+        "Mix potato starch, sugar, and 0.25 cups water to make potato starch slurry. Cover and set aside.",
         "Stir-fry the pork belly in a large, deep wok (or pan) with 1 tablespoon of vegetable oil for about 4-5 minutes, until golden brown and crispy.",
-        "Pour out the excess pork fat, leaving 1-2 teaspoons in the pan."
+        "Pour out the excess pork fat, leaving 1-2 teaspoons in the pan.",
+        "Add daikon radish and stir fry for 1 minute.",
+        "Add potato, onion, and zucchini and keep stirring for about 3 minutes until the potato looks a little translucent.",
+        "Add vegetable oil to the center of the wok, then add chunjang (black bean paste) and stir it with a wooden spoon for 1 minute to fry it. Then mix everything in the wok and keep stirring.",
+        "Add  2 cups of water to the wok and let it simmer and cook with the lid closed for about 10 minutes.",
+        "Open the lid and taste a sample of the radish and potato. If fully cooked, stir in potato starch slurry little by little. Keep stirring until mixture thickens.",
+        "Pour sauce over noodles.",
+        "Add sliced cucumber, egg, or meat as desired. Serve hot."
     ]
 }
