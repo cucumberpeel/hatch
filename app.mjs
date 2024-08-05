@@ -259,4 +259,4 @@ app.get('/ingredient/*', (req, res) => {
 });
 // end of path routing
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);

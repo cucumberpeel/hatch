@@ -19,6 +19,9 @@
     "mongoose": "^8.0.0",
     "mongoose-slug-updater": "^3.3.0"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "devDependencies": {
     "chai": "^4.3.10",
     "eslint": "^8.55.0",
