@@ -61,7 +61,7 @@ function readRecipesFromFS(path, onReadingDone) {
                 // const recipe = Object.assign(fileInJson, Recipe.prototype);
                 // recipeList.push(recipe);
   
-                //If we are done with this LAST file, call the callback to signal a finish of reading all configs!
+                //If we are done with this LAST file, call the callback to signal a finish of reading all configs
                 if (count === nFiles) {
                     onReadingDone(recipeList);
                 }
