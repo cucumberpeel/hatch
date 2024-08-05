@@ -244,6 +244,12 @@ readRecipesFromFS(recipeReadingPath, (recipeList) => {
 // end of file reading
 
 // beginning of path routing
+app.get('/', (req, res) => {
+    res.render('home', {
+        
+    })
+});
+
 // route paths based on recipe titles
 app.get('/recipe/*', (req, res) => {
     const recipeName = req.path.split("/recipe/")[1];
@@ -259,4 +265,4 @@ app.get('/ingredient/*', (req, res) => {
 });
 // end of path routing
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
