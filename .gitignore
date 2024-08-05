@@ -2,3 +2,6 @@ node_modules
 *.swo
 *.swp
 .env
+npm-debug.log
+.DS-Store
+.eslintrc.cjs
