@@ -1,5 +1,6 @@
-node_modules
+node_modules/
 *.swo
 *.swp
 .env
 .eslintrc.cjs
+.DS_Store
