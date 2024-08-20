@@ -218,36 +218,31 @@ readIngredientsFromFS(ingredientReadingPath, (ingredientList) => {
 // read in list of recipes
 const recipeReadingPath = path.resolve(__dirname, './saved-recipes');
 readRecipesFromFS(recipeReadingPath, (recipeList) => {
-    app.get('/', (req, res) => {
-        if (req.query['searchQ']) {
-            const newList = filterRecipesByIngredient(req, recipeList);
-            res.render('home', {
-                title: "Recipes that include " + req.query['searchQ'],
-                "recipe": newList
-            });
-        }
-        else if (req.query['recipeQ']) {
-            const newList = filterRecipesByKeyword(req, recipeList);
-            res.render('home', {
-                title: req.query['recipeQ'] + " Recipes",
-                "recipe": newList
-            });
-        }
-        else {
-            res.render('home', {
-                title: "Recipes",
-                "recipe": recipeList
-            });
-        }
-    });
+    console.log(recipeList);
 });
 // end of file reading
 
-// beginning of path routing
 app.get('/', (req, res) => {
-    res.render('home', {
-        
-    })
+    if (req.query['searchQ']) {
+        const newList = filterRecipesByIngredient(req, recipeList);
+        res.render('home', {
+            title: "Recipes that include " + req.query['searchQ'],
+            "recipe": newList
+        });
+    }
+    else if (req.query['recipeQ']) {
+        const newList = filterRecipesByKeyword(req, recipeList);
+        res.render('home', {
+            title: req.query['recipeQ'] + " Recipes",
+            "recipe": newList
+        });
+    }
+    else {
+        res.render('home', {
+            title: "Recipes",
+            "recipe": recipeList
+        });
+    }
 });
 
 // route paths based on recipe titles
