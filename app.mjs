@@ -62,6 +62,7 @@ function readRecipesFromFS(path, onReadingDone) {
                 // recipeList.push(recipe);
   
                 //If we are done with this LAST file, call the callback to signal a finish of reading all configs
+                //If we are done with this LAST file, call the callback to signal a finish of reading all configs
                 if (count === nFiles) {
                     onReadingDone(recipeList);
                 }
@@ -260,4 +261,4 @@ app.get('/ingredient/*', (req, res) => {
 });
 // end of path routing
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT ?? 3000);
