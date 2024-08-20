@@ -4,7 +4,7 @@ import { config } from 'dotenv';
 config();
 
 console.log(process.env.DSN);
-mongoose.connect(process.env.DSN);
+mongoose.connect(process.env.DSN, { useNewUrlParser: true });
 
 // ingredient schema
 const Ingredient = new mongoose.Schema({
