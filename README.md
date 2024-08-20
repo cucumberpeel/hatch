@@ -1,5 +1,4 @@
 # Hatch
-Amory Gao
 @cucumberpeel
 
 ## Overview
