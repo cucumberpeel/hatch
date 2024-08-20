@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+import { config } from 'dotenv';
+config();
+
 console.log(process.env.DSN);
 mongoose.connect(process.env.DSN);
 

@@ -218,7 +218,7 @@ readIngredientsFromFS(ingredientReadingPath, (ingredientList) => {
 // read in list of recipes
 const recipeReadingPath = path.resolve(__dirname, './saved-recipes');
 readRecipesFromFS(recipeReadingPath, (recipeList) => {
-    console.log(recipeList);
+    // console.log(recipeList);
 });
 // end of file reading
 
