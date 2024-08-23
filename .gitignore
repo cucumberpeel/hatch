@@ -3,3 +3,4 @@ node_modules
 *.swp
 .env
 .eslintrc.cjs
+new.mjs
