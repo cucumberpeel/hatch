@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import { config } from 'dotenv';
 config();
 
-console.log(process.env.DSN);
-mongoose.connect(process.env.DSN, { useNewUrlParser: true });
+console.log(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 // ingredient schema
 const Ingredient = new mongoose.Schema({
