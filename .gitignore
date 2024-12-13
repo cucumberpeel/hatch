@@ -5,3 +5,8 @@ node_modules/
 .eslintrc.cjs
 new.mjs
 .DS_Store
+saved-ingredients/
+saved-recipes/
+Procfile
+package-lock.json
+package.json
