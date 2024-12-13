@@ -1,6 +1,14 @@
 # Hatch
 @cucumberpeel
 
+## Introduction
+
+i wanted to make a React version of a solo final project that i originally made for csci-ua 467: applied internet technology in fall 2023. back then, this entire tech stack was new to me - i was learning databases, Node, Handlebars, AND full-stack development for the first time. i remember i barely deployed the finished product in time. it might not have even met the baseline requirements. now i have a better idea of what i'm doing lol
+
+my tech stack at that time: frontend=[Handlebars.js, Bootstrap CSS], backend=[Express.js, MongoDB]
+
+my tech stack for the new version: frontend=[React, React Bootstrap], backend=[Express.js, MongoDB]
+
 ## Overview
 
 Asian Americans, are you tired of making the same few recipes over and over? Can't think of ways to switch up your diet? Introducing Hatch, your personal cooking companion!
